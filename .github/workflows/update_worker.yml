@@ -28,7 +28,7 @@ jobs:
           # 检查 update_type.txt 文件是否存在
           if [ ! -f "update_type.txt" ]; then
             # 如果文件不存在，则创建它并写入 '1' 作为默认内容 (1=正式版)
-            echo "1" > update_type.txt
+            echo "0" > update_type.txt
             # 设置环境变量，标记此文件是在当前工作流运行中创建的
             echo "UPDATE_TYPE_FILE_CREATED=true" >> $GITHUB_ENV
             echo "update_type.txt 文件不存在，已自动创建并设置为 '1' (正式版)。" # update_type.txt 文件不存在，已自动创建并设置为 '1' (正式版)。
